@@ -903,9 +903,9 @@
 	<link rel='stylesheet' id='style-tailwind-css-css'
 		href='../wp-content/plugins/plugin-diogenes-componentes/css/tailwind2dio3a79.css?v=20022024130739000000&amp;ver=6.3.3'
 		media='all' />
-	<link rel='stylesheet' id='jquery-confirm-css-diogenes-frontend-css'
-		href='../../cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min5c45.css?ver=6.3.3'
-		media='all' />
+
+		<link rel="stylesheet" id='jquery-confirm-css-diogenes-frontend-css' href="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+
 	<link rel='stylesheet' id='style-suitpay-css'
 		href='../wp-content/plugins/plugin-suitpay-pix/assets/css/style3a79.css?v=20022024130739000000&amp;ver=6.3.3'
 		media='all' />
@@ -1352,86 +1352,66 @@
 											</div>
 										</div>
 										<div class="elementor-element elementor-element-570bc8ff elementor-widget elementor-widget-progress"
-											data-id="570bc8ff" data-element_type="widget"
+											data-id="" data-element_type="widget"
 											data-widget_type="progress.default">
+											
 											<div class="elementor-widget-container">
+
 												<style>
-													/*! elementor - v3.16.0 - 17-10-2023 */
-													.elementor-widget-progress {
-														text-align: left
-													}
-
-													.elementor-progress-wrapper {
+													.progress-container {
+														width: 100%;
+														background-color: #272626;
+														padding: 1px;
+														border-radius: 5px;
+														box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 														position: relative;
-														background-color: #eee;
-														color: #fff;
-														height: 100%;
-														border-radius: 2px
 													}
 
-													.elementor-progress-bar {
-														display: flex;
-														background-color: #69727d;
-														width: 0;
-														font-size: 11px;
+													/* Informação no início da barra */
+													.progress-info {
+														position: absolute;
+														left: 5px;
+														top: 50%;
+														transform: translateY(-50%);
+														color: black;
+														font-weight: bold;
+													}
+
+													/* Barra de progresso */
+													.progress-bar {
 														height: 30px;
+														border-radius: 5px;
+														background-color: #4CAF50;
+														text-align: center;
 														line-height: 30px;
-														border-radius: 2px;
-														transition: width 1s ease-in-out
-													}
-
-													.elementor-progress-text {
-														flex-grow: 1;
-														white-space: nowrap;
-														text-overflow: ellipsis;
-														overflow: hidden;
-														padding-left: 15px
-													}
-
-													.elementor-progress-percentage {
-														padding-right: 15px
-													}
-
-													.elementor-widget-progress .elementor-progress-wrapper.progress-info .elementor-progress-bar {
-														background-color: #5bc0de
-													}
-
-													.elementor-widget-progress .elementor-progress-wrapper.progress-success .elementor-progress-bar {
-														background-color: #5cb85c
-													}
-
-													.elementor-widget-progress .elementor-progress-wrapper.progress-warning .elementor-progress-bar {
-														background-color: #f0ad4e
-													}
-
-													.elementor-widget-progress .elementor-progress-wrapper.progress-danger .elementor-progress-bar {
-														background-color: #d9534f
-													}
-
-													.elementor-progress .elementor-title {
-														display: block
-													}
-
-													@media (max-width:767px) {
-														.elementor-progress-text {
-															padding-left: 10px
-														}
-													}
-
-													.e-con-inner .elementor-progress-wrapper,
-													.e-con .elementor-progress-wrapper {
-														height: auto
+														color: rgb(45, 45, 45);
+														text-align: end;
+														padding-right: 14px;
 													}
 												</style>
-												<div class="elementor-progress-wrapper" role="progressbar"
-													aria-valuemin="0" aria-valuemax="100" aria-valuenow="92"
-													aria-valuetext="92% (Chance de acerto MUITO ALTA)">
-													<div class="elementor-progress-bar" data-max="92">
-														<span class="elementor-progress-text">Chance de acerto MUITO
-															ALTA</span>
-														<span class="elementor-progress-percentage">92%</span>
-													</div>
+												<div class="progress-container">
+													<span class="progress-info">Chance de acerto MUITO ALTA</span>
+													<div class="progress-bar" style="width: 92%;">92%</div>
 												</div>
+
+												<style>
+													.gbarVerde {
+														background-color: #01E400 !important;
+													}
+													.gbarVerdeClaro {
+														background-color: #9AFF00 !important;
+													}
+													.gbarVerdeClaroAmerelo {
+														background-color: #EAFF00 !important;
+													}
+													.amareloColor {
+														background-color: #FFCB00 !important;
+													}
+													.amareloColorEscuro {
+														background-color:#FF8F00 !important;
+													}
+												</style>
+												
 											</div>
 										</div>
 										<div class="elementor-element elementor-element-403283b8 elementor-mobile-align-center elementor-align-center elementor-widget elementor-widget-button"
@@ -1453,15 +1433,10 @@
 											data-id="4ffd2dd" data-element_type="widget"
 											data-widget_type="progress.default">
 											<div class="elementor-widget-container">
-
-												<div class="elementor-progress-wrapper" role="progressbar"
-													aria-valuemin="0" aria-valuemax="100" aria-valuenow="71"
-													aria-valuetext="71% (Chance de acerto ALTA)">
-													<div class="elementor-progress-bar" data-max="71">
-														<span class="elementor-progress-text">Chance de acerto
-															ALTA</span>
-														<span class="elementor-progress-percentage">71%</span>
-													</div>
+												
+												<div class="progress-container">
+													<span class="progress-info">Chance de acerto ALTA</span>
+													<div class="progress-bar gbarVerdeClaro" style="width: 71%;">71%</div>
 												</div>
 											</div>
 										</div>
@@ -1485,14 +1460,9 @@
 											data-widget_type="progress.default">
 											<div class="elementor-widget-container">
 
-												<div class="elementor-progress-wrapper" role="progressbar"
-													aria-valuemin="0" aria-valuemax="100" aria-valuenow="52"
-													aria-valuetext="52% (Chance de acerto MÉDIA)">
-													<div class="elementor-progress-bar" data-max="52">
-														<span class="elementor-progress-text">Chance de acerto
-															MÉDIA</span>
-														<span class="elementor-progress-percentage">52%</span>
-													</div>
+												<div class="progress-container">
+													<span class="progress-info">Chance de acerto MÉDIA</span>
+													<div class="progress-bar gbarVerdeClaroAmerelo" style="width: 52%;">52%</div>
 												</div>
 											</div>
 										</div>
@@ -1516,14 +1486,9 @@
 											data-widget_type="progress.default">
 											<div class="elementor-widget-container">
 
-												<div class="elementor-progress-wrapper" role="progressbar"
-													aria-valuemin="0" aria-valuemax="100" aria-valuenow="28"
-													aria-valuetext="28% (Chance de acerto MÉDIA)">
-													<div class="elementor-progress-bar" data-max="28">
-														<span class="elementor-progress-text">Chance de acerto
-															MÉDIA</span>
-														<span class="elementor-progress-percentage">28%</span>
-													</div>
+												<div class="progress-container">
+													<span class="progress-info">Chance de acerto MÉDIA</span>
+													<div class="progress-bar amareloColor" style="width: 28%;">28%</div>
 												</div>
 											</div>
 										</div>
@@ -1547,12 +1512,15 @@
 											data-widget_type="progress.default">
 											<div class="elementor-widget-container">
 
-												<div class="elementor-progress-wrapper" role="progressbar"
+												<!-- <div class="elementor-progress-wrapper" role="progressbar"
 													aria-valuemin="0" aria-valuemax="100" aria-valuenow="16">
 													<div class="elementor-progress-bar" data-max="16">
 														<span class="elementor-progress-text"></span>
 														<span class="elementor-progress-percentage">16%</span>
 													</div>
+												</div> -->
+												<div class="progress-container">
+													<div class="progress-bar amareloColorEscuro" style="width: 16%;">16%</div>
 												</div>
 											</div>
 										</div>
@@ -1834,8 +1802,11 @@
 			document.body.className = c;
 		})();
 	</script>
-	<script src='../../cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min8a54.js?ver=1.0.0'
-		id='jquery-confirm-diogenes-frontend-js'></script>
+	<!-- <script src='../../cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min8a54.js?ver=1.0.0'
+		id='jquery-confirm-diogenes-frontend-js'></script> -->
+
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js" id='jquery-confirm-diogenes-frontend-js'></script>
+
 	<script src='../wp-content/plugins/plugin-suitpay-pix/assets/js/scripts0680.js?v=20022024130739000000&amp;ver=1.0.0'
 		id='scripts-suitpay-js'></script>
 	<script
